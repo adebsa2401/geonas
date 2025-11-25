@@ -18,7 +18,7 @@ const HomeBanner = () => {
         <div className="bg-secondary p-5 text-secondary-foreground flex gap-4">
           <MailOpenIcon size={30} className="shrink-0" />
           <div className="space-y-2">
-            <p className="text-lg font-medium">hello@geopoint.com</p>
+            <p className="text-lg font-medium">contact@geonas.com</p>
             <p className="text-sm">
               Don’t hesitate and write us. This is the general email.
             </p>

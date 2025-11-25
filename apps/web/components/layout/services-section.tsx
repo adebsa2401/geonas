@@ -31,16 +31,16 @@ const ServicesSection = () => {
 
         <div className="space-y-8 bg-card p-5">
           <div className="relative size-16">
-            <Image fill src="/images/service-icon-1.png" alt="Service icon" />
+            <Image fill src="/images/service-icon-2.png" alt="Service icon" />
           </div>
           <h3 className="font-bold text-secondary/80 text-lg uppercase">
-            Real Estate Property Boundaries
+            Land Survey Plat
           </h3>
           <div className="w-1/2 h-0.5 bg-primary" />
           <p className="text-secondary/80 leading-8">
-            A property line map, or a “plat,” is a drawing that maps out your
-            property&apos;s boundary lines, and includes details like
-            elevations, bodies of water and structures.
+            A Land Survey Plat is a survey to establish the boundaries of a
+            parcel using its legal description which involves finding or setting
+            property corners.
           </p>
           <ArrowRightIcon
             aria-hidden="true"
@@ -51,16 +51,16 @@ const ServicesSection = () => {
 
         <div className="space-y-8 bg-card p-5">
           <div className="relative size-16">
-            <Image fill src="/images/service-icon-1.png" alt="Service icon" />
+            <Image fill src="/images/service-icon-3.png" alt="Service icon" />
           </div>
           <h3 className="font-bold text-secondary/80 text-lg uppercase">
-            Real Estate Property Boundaries
+            Topographic Exhibit
           </h3>
           <div className="w-1/2 h-0.5 bg-primary" />
           <p className="text-secondary/80 leading-8">
-            A property line map, or a “plat,” is a drawing that maps out your
-            property&apos;s boundary lines, and includes details like
-            elevations, bodies of water and structures.
+            In modern mapping, a topographic map or topographic sheet is a type
+            of map characterized by large-scale detail and quantitative
+            representation of relief.
           </p>
           <ArrowRightIcon
             aria-hidden="true"
@@ -71,16 +71,16 @@ const ServicesSection = () => {
 
         <div className="space-y-8 bg-card p-5">
           <div className="relative size-16">
-            <Image fill src="/images/service-icon-1.png" alt="Service icon" />
+            <Image fill src="/images/service-icon-4.png" alt="Service icon" />
           </div>
           <h3 className="font-bold text-secondary/80 text-lg uppercase">
-            Real Estate Property Boundaries
+            Improvement Location Certificate
           </h3>
           <div className="w-1/2 h-0.5 bg-primary" />
           <p className="text-secondary/80 leading-8">
-            A property line map, or a “plat,” is a drawing that maps out your
-            property&apos;s boundary lines, and includes details like
-            elevations, bodies of water and structures.
+            Is an inspection of a parcel by a licensed surveyor to determine
+            possible encroachments or other matters that could be adverse from a
+            land surveying standpoint.
           </p>
           <ArrowRightIcon
             aria-hidden="true"
