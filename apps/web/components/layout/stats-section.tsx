@@ -14,7 +14,7 @@ const StatsSection = () => {
           <p className="text-lg leading-relaxed text-secondary font-medium">
             One way to check your property lines is to look at the deed of the
             property. As a legal document about your property, the deed should
-            have a worded description of your land’s boundaries.
+            have a worded description of your land&apos;s boundaries.
           </p>
         </div>
 
