@@ -1,6 +1,6 @@
 const SloganSection = () => {
   return (
-    <section className="px-5 py-16 flex flex-col items-center gap-8 bg-[linear-gradient(130deg,_rgba(21,41,76,0.9)_0%,_rgba(21,41,76,0.6)_100%),linear-gradient(0,rgba(21,41,76,0.5)_0%,rgba(21,41,76,0.5)_100%),url(/images/bg-pattern.png)] bg-cover">
+    <section className="px-5 py-16 xl:pt-48 flex flex-col items-center gap-8 bg-[linear-gradient(130deg,_rgba(21,41,76,0.9)_0%,_rgba(21,41,76,0.6)_100%),linear-gradient(0,rgba(21,41,76,0.5)_0%,rgba(21,41,76,0.5)_100%),url(/images/bg-pattern.png)] bg-cover">
       <h2 className="text-3xl md:text-4xl font-bold leading-tight text-center text-primary-foreground max-w-md">
         Professional Land Surveying & Mapping
       </h2>
