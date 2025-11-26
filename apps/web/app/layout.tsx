@@ -4,6 +4,7 @@ import "@workspace/ui/globals.css";
 import { Providers } from "@/components/providers";
 import { SiteSidebar } from "@/components/layout/site-sidebar";
 import { SiteHeader } from "@/components/layout/site-header";
+import { SiteFooter } from "@/components/layout/site-footer";
 
 const fontSans = Geist({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function RootLayout({
             <main className="md:pl-[7%]">
               <SiteHeader />
               {children}
+              <SiteFooter />
             </main>
           </div>
         </Providers>
