@@ -5,7 +5,7 @@ const ServicesSection = () => {
   return (
     <section className="bg-[linear-gradient(310deg,_#FFFFFFEB_0%,_#f6f6f6_100%),url(/images/bg-pattern.png)] bg-cover pt-20 md:pt-32 lg:pt-40 xl:pt-8">
       <div className="lg:container mx-auto xl:translate-y-32 space-y-10">
-        <div className="px-5">
+        <div className="max-lg:px-5">
           <h2 className="max-w-xl text-3xl md:text-4xl font-bold leading-tight text-secondary">
             Accurate & Precise Land Surveying Services With The Highest Quality.
           </h2>

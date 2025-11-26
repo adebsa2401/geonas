@@ -2,9 +2,9 @@ import { Button } from "@workspace/ui/components/button";
 
 const RecentNewsSection = () => {
   return (
-    <section className="relative -z-10 md:bg-accent">
+    <section className="relative -z-10 md:bg-accent px-5 py-20">
       <div className="absolute right-0 -top-40 bottom-0 w-1/4 bg-[url(/images/bg-recent-news.png)] bg-right bg-cover bg-no-repeat max-lg:hidden" />
-      <div className="space-y-8 p-5 py-20 container mx-auto">
+      <div className="space-y-8 container mx-auto">
         <h2 className="font-bold text-3xl max-w-2xs text-secondary">
           Recent News
         </h2>
