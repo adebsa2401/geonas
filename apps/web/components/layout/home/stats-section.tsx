@@ -20,7 +20,7 @@ const StatsSection = () => {
 
         <div className="bg-[url(/images/bg-stats.png)] bg-no-repeat bg-cover size-full max-md:hidden bg-right" />
 
-        <div className="grid md:grid-cols-4 md:col-span-2 max-w-5xl lg:absolute lg:left-0 lg:bottom-20">
+        <div className="grid grid-cols-2 md:grid-cols-4 md:col-span-2 max-w-5xl lg:absolute lg:left-0 lg:bottom-20">
           <div className="flex flex-col items-center justify-center gap-1 px-8 py-12 bg-secondary text-secondary-foreground">
             <span className="font-bold text-4xl text-center">2.400+</span>
             <span className="font-medium text-center">Projects</span>
