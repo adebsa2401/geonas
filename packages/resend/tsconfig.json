@@ -2,9 +2,8 @@
   "extends": "@workspace/typescript-config/react-library.json",
   "compilerOptions": {
     "baseUrl": ".",
-    "allowImportingTsExtensions": true,
     "paths": {
-      "@workspace/ui/*": ["./src/*"]
+      "@workspace/resend/*": ["./src/*"]
     }
   },
   "include": ["."],

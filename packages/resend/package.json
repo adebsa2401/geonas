@@ -29,6 +29,7 @@
   },
   "exports": {
     "./init": "./src/init.ts",
+    "./tailwind.config": "./src/tailwind.config.ts",
     "./*": "./src/*.tsx"
   }
 }

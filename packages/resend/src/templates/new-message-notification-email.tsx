@@ -12,7 +12,7 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
-import tailwindConfig from "../../tailwind.config.ts";
+import tailwindConfig from "@workspace/resend/tailwind.config";
 
 type NewMessageNotificationEmailProps = {
   senderName: string;
