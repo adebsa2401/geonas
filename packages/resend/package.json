@@ -7,7 +7,7 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
-    "@workspace/ui": "workspace:*",
+    "@react-email/components": "^1.0.1",
     "lucide-react": "^0.475.0",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -28,13 +28,7 @@
     "typescript": "^5.9.2"
   },
   "exports": {
-    "./*": {
-      "types": "./src/*.ts",
-      "default": "./dist/*.js"
-    },
-    "./templates": {
-      "types": "./src/templates/*.tsx",
-      "default": "./dist/templates/*.js"
-    }
+    "./init": "./src/init.ts",
+    "./*": "./src/*.tsx"
   }
 }

@@ -2,6 +2,7 @@ import { z } from "zod";
 import { baseProcedure, createTRPCRouter } from "@workspace/trpc/init";
 import { resend } from "@workspace/resend/init";
 import { TRPCError } from "@trpc/server";
+import { NewMessageNotificationEmail } from "@workspace/resend/templates/new-message-notification-email";
 
 export const contactRouter = createTRPCRouter({
   sendContactUsForm: baseProcedure
@@ -34,10 +35,15 @@ export const contactRouter = createTRPCRouter({
     )
     .mutation(async ({ input }) => {
       const { data, error } = await resend.emails.send({
-        from: "No Reply <contact@resend.dev>",
+        from: "noreply <noreply@resend.dev>",
         to: ["adebsa2401@gmail.com"],
         subject: input.subject,
-        html: `<h1>Hello from Resend!</h1><p>${input.message}</p>`,
+        react: NewMessageNotificationEmail({
+          senderName: input.name,
+          senderEmail: input.email,
+          interestedIn: input.interestedIn,
+          message: input.message,
+        }),
       });
 
       if (error) {
