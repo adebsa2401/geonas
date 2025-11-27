@@ -1,10 +1,10 @@
-import { HomeBanner } from "@/components/layout/home-banner";
-import { ServicesSection } from "@/components/layout/services-section";
-import { SloganSection } from "@/components/layout/slogan-section";
-import { StatsSection } from "@/components/layout/stats-section";
-import { AboutUsSection } from "@/components/layout/about-us-section";
-import { PartnersSection } from "@/components/layout/partners-section";
-import { RecentNewsSection } from "@/components/layout/recent-news-section";
+import { HomeBanner } from "@/components/layout/home/home-banner";
+import { ServicesSection } from "@/components/layout/home/services-section";
+import { SloganSection } from "@/components/layout/home/slogan-section";
+import { StatsSection } from "@/components/layout/home/stats-section";
+import { AboutUsSection } from "@/components/layout/home/about-us-section";
+import { PartnersSection } from "@/components/layout/home/partners-section";
+import { RecentNewsSection } from "@/components/layout/home/recent-news-section";
 
 export default function Page() {
   return (
