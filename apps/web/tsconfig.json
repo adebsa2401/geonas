@@ -4,6 +4,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./*"],
+      "@workspace/resend/*": ["../../packages/resend/src/*"],
+      "@workspace/trpc/*": ["../../packages/trpc/src/*"],
       "@workspace/ui/*": ["../../packages/ui/src/*"]
     },
     "plugins": [

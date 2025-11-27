@@ -1,0 +1,19 @@
+{
+  "extends": "@workspace/typescript-config/nextjs.json",
+  "compilerOptions": {
+    "outDir": "dist",
+    "rootDir": "src",
+    "paths": {
+      "@workspace/trpc/*": [
+        "./src/*"
+      ]
+    }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
+}

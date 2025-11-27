@@ -1,0 +1,50 @@
+{
+  "name": "@workspace/trpc",
+  "type": "module",
+  "scripts": {
+    "dev": "tsc --watch",
+    "lint": "eslint . --max-warnings 0",
+    "build": "tsc"
+  },
+  "exports": {
+    "./*": {
+      "types": "./src/*.ts",
+      "default": "./dist/*.js"
+    },
+    "./client": {
+      "types": "./src/client.tsx",
+      "default": "./dist/client.js"
+    }
+  },
+  "peerDependencies": {
+    "@tanstack/react-query": "^5.85.6",
+    "@trpc/client": "^11.5.0",
+    "@trpc/server": "^11.5.0",
+    "@trpc/tanstack-react-query": "^11.5.0",
+    "@workspace/resend": "workspace:*",
+    "next": "^15.4.5",
+    "react": "^19.1.1"
+  },
+  "devDependencies": {
+    "@tanstack/react-query": "^5.85.6",
+    "@trpc/client": "^11.5.0",
+    "@trpc/server": "^11.5.0",
+    "@trpc/tanstack-react-query": "^11.5.0",
+    "@turbo/gen": "^2.5.5",
+    "@types/node": "^20.19.9",
+    "@types/react": "^19.1.9",
+    "@workspace/eslint-config": "workspace:*",
+    "@workspace/resend": "workspace:*",
+    "@workspace/typescript-config": "workspace:*",
+    "eslint": "^9.32.0",
+    "next": "^15.4.5",
+    "react": "^19.1.1",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "client-only": "^0.0.1",
+    "server-only": "^0.0.1",
+    "superjson": "^2.2.2",
+    "zod": "^3.25.76"
+  }
+}

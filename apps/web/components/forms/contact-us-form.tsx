@@ -22,6 +22,9 @@ import {
 } from "@workspace/ui/components/select";
 import { Textarea } from "@workspace/ui/components/textarea";
 import { Button } from "@workspace/ui/components/button";
+import { useTRPC } from "@workspace/trpc/client";
+import { useMutation } from "@tanstack/react-query";
+import { toast } from "@workspace/ui/components/sonner";
 
 const validationSchema = z.object({
   name: z
@@ -62,9 +65,33 @@ const ContactUsForm = () => {
     },
   });
 
-  const handleSubmit = useCallback((values: ContactUsFormValues) => {
-    console.log("Form submitted with values:", values);
-  }, []);
+  const trpc = useTRPC();
+
+  const { mutateAsync } = useMutation(
+    trpc.contact.sendContactUsForm.mutationOptions({
+      onSuccess: () => {
+        form.reset();
+        toast.success("Your message has been sent successfully!");
+      },
+      onError: (error) => {
+        console.error("Error sending contact us form:", error);
+        toast.error(error.message);
+      },
+    }),
+  );
+
+  const handleSubmit = useCallback(
+    async (values: ContactUsFormValues) => {
+      await mutateAsync({
+        name: values.name,
+        email: values.email,
+        interestedIn: values.interestedIn,
+        subject: values.subject,
+        message: values.message,
+      });
+    },
+    [mutateAsync],
+  );
 
   return (
     <Form {...form}>
@@ -164,8 +191,13 @@ const ContactUsForm = () => {
           )}
         />
 
-        <Button type="submit" size="lg" className="w-full">
-          Send
+        <Button
+          disabled={form.formState.isSubmitting}
+          type="submit"
+          size="lg"
+          className="w-full"
+        >
+          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
         </Button>
       </form>
     </Form>
