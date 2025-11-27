@@ -1,5 +1,10 @@
 import { Separator } from "@workspace/ui/components/separator";
 import { MailOpenIcon, MapPinIcon, PhoneCallIcon } from "lucide-react";
+import {
+  companyAddress,
+  companyEmail,
+  formatCompanyPhone,
+} from "@/data/contacts";
 
 const ContactsInfoSection = () => {
   return (
@@ -27,16 +32,16 @@ const ContactsInfoSection = () => {
         <MapPinIcon size={30} className="shrink-0 text-primary" />
         <div className="space-y-2 text-secondary">
           <p className="text-lg font-medium">Geonas</p>
-          <p className="text-sm">670 Garden Drive, Boise, Idaho 83702</p>
+          <p className="text-sm">{companyAddress}</p>
         </div>
       </div>
 
       <div className="flex gap-4">
         <MailOpenIcon size={30} className="shrink-0 text-primary" />
         <div className="space-y-2 text-secondary">
-          <p className="text-lg font-medium">contact@geonas.com</p>
+          <p className="text-lg font-medium">{companyEmail}</p>
           <p className="text-sm">
-            Don’t hesitate and write us. This is the general email.
+            Don&apos;t hesitate and write us. This is the general email.
           </p>
         </div>
       </div>
@@ -44,7 +49,7 @@ const ContactsInfoSection = () => {
       <div className="flex gap-4">
         <PhoneCallIcon size={30} className="shrink-0 text-primary" />
         <div className="space-y-2 text-secondary">
-          <p className="text-lg font-medium">+452.87.9875</p>
+          <p className="text-lg font-medium">{formatCompanyPhone()}</p>
           <p className="text-sm">
             We are available for questions and estimates.
           </p>

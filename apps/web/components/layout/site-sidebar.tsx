@@ -1,4 +1,5 @@
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { getCompanyWhatsAppURI } from "@/data/contacts";
 
 const SiteSidebar = () => {
   return (
@@ -10,8 +11,15 @@ const SiteSidebar = () => {
         <li className="inline-flex items-center justify-center size-9 rounded-full border">
           <FaFacebookF />
         </li>
-        <li className="inline-flex items-center justify-center size-9 rounded-full border">
-          <FaWhatsapp />
+        <li>
+          <a
+            href={getCompanyWhatsAppURI()}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center size-9 rounded-full border"
+          >
+            <FaWhatsapp />
+          </a>
         </li>
       </ul>
 

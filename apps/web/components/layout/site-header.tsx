@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "@workspace/ui/components/button";
 import { MailIcon, MapPinIcon, MenuIcon, PhoneIcon } from "lucide-react";
@@ -8,8 +10,18 @@ import {
   Trigger as AccordionTrigger,
 } from "@workspace/ui/components/accordion";
 import Link from "next/link";
+import {
+  companyAddress,
+  companyEmail,
+  formatCompanyPhone,
+  getCompanyPhoneURI,
+} from "@/data/contacts";
+import { usePathname } from "next/navigation";
+import { cn } from "@workspace/ui/lib/utils";
 
 const SiteHeader = () => {
+  const pathname = usePathname();
+
   return (
     <header>
       <Accordion collapsible type="single" className="lg:hidden bg-accent">
@@ -34,13 +46,34 @@ const SiteHeader = () => {
           <AccordionContent className="px-5">
             <nav>
               <ul>
-                <li className="border-dashed border-t py-4 font-medium text-lg text-primary">
+                <li
+                  className={cn(
+                    "border-dashed border-t py-4 font-medium text-lg text-secondary",
+                    {
+                      "text-primary": pathname === "/",
+                    },
+                  )}
+                >
                   <Link href="/">Home</Link>
                 </li>
-                <li className="border-dashed border-t py-4 font-medium text-lg text-secondary">
-                  <Link href="/blog">News</Link>
+                <li
+                  className={cn(
+                    "border-dashed border-t py-4 font-medium text-lg text-secondary",
+                    {
+                      "text-primary": pathname.startsWith("/news"),
+                    },
+                  )}
+                >
+                  <Link href="/news">News</Link>
                 </li>
-                <li className="border-dashed border-t py-4 font-medium text-lg text-secondary">
+                <li
+                  className={cn(
+                    "border-dashed border-t py-4 font-medium text-lg text-secondary",
+                    {
+                      "text-primary": pathname === "/about-us",
+                    },
+                  )}
+                >
                   <Link href="/about-us">About us</Link>
                 </li>
                 <li className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all">
@@ -63,31 +96,31 @@ const SiteHeader = () => {
             <div className="flex items-center gap-2 justify-center flex-1">
               <MapPinIcon size={14} className="text-primary" />
               <p className="text-sm font-medium text-secondary/80">
-                79 Rue de Bruxelles, Namur 5000
+                {companyAddress}
               </p>
             </div>
 
             <div className="flex items-center gap-2">
               <PhoneIcon size={14} className="text-primary" />
               <a
-                href="tel:+3281241900"
+                href={getCompanyPhoneURI()}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-secondary/80"
               >
-                +32 81 24 19 00
+                {formatCompanyPhone()}
               </a>
             </div>
 
             <div className="flex items-center gap-2">
               <MailIcon size={14} className="text-primary" />
               <a
-                href="mailto:contact@geonas.com"
+                href={`mailto:${companyEmail}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-medium text-secondary/80"
               >
-                contact@geonas.com
+                {companyEmail}
               </a>
             </div>
           </div>
@@ -101,13 +134,28 @@ const SiteHeader = () => {
 
             <nav className="flex items-center gap-10 flex-1 py-5">
               <div className="flex-1 flex items-center gap-10">
-                <Link href="/" className="font-medium text-primary">
+                <Link
+                  href="/"
+                  className={cn("font-medium text-secondary", {
+                    "text-primary": pathname === "/",
+                  })}
+                >
                   Home
                 </Link>
-                <Link href="/blog" className="font-medium text-secondary">
+                <Link
+                  href="/news"
+                  className={cn("font-medium text-secondary", {
+                    "text-primary": pathname.startsWith("/news"),
+                  })}
+                >
                   News
                 </Link>
-                <Link href="/about-us" className="font-medium text-secondary">
+                <Link
+                  href="/about-us"
+                  className={cn("font-medium text-secondary", {
+                    "text-primary": pathname === "/about-us",
+                  })}
+                >
                   About us
                 </Link>
               </div>

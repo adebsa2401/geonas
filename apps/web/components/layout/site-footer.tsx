@@ -3,6 +3,7 @@ import { Input } from "@workspace/ui/components/input";
 import { Button } from "@workspace/ui/components/button";
 import { SearchIcon } from "lucide-react";
 import { FaFacebookF, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
+import { getCompanyWhatsAppURI } from "@/data/contacts";
 
 const SiteFooter = () => {
   return (
@@ -143,20 +144,25 @@ const SiteFooter = () => {
             Copyright © {new Date().getFullYear()} • Geonas
           </p>
           <div className="flex gap-x-2 gap-y-5 items-center justify-center flex-wrap">
-            <div className="flex items-center gap-2 py-2 px-4 border rounded-full shrink-0 text-sm text-secondary font-medium">
+            <div className="inline-flex items-center gap-2 py-2 px-4 border rounded-full shrink-0 text-sm text-secondary font-medium">
               <FaLinkedinIn />
               LinkedIn
             </div>
 
-            <div className="flex items-center gap-2 py-2 px-4 border rounded-full shrink-0 text-sm text-secondary font-medium">
+            <div className="inline-flex items-center gap-2 py-2 px-4 border rounded-full shrink-0 text-sm text-secondary font-medium">
               <FaFacebookF />
               Facebook
             </div>
 
-            <div className="flex items-center gap-2 py-2 px-4 border rounded-full shrink-0 text-sm text-secondary font-medium">
+            <a
+              href={getCompanyWhatsAppURI()}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 py-2 px-4 border rounded-full shrink-0 text-sm text-secondary font-medium"
+            >
               <FaWhatsapp />
               WhatsApp
-            </div>
+            </a>
           </div>
         </div>
       </div>

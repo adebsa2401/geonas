@@ -1,4 +1,9 @@
 import { MailOpenIcon, MapPinIcon, PhoneCallIcon } from "lucide-react";
+import {
+  companyAddress,
+  companyEmail,
+  formatCompanyPhone,
+} from "@/data/contacts";
 
 const HomeBanner = () => {
   return (
@@ -11,8 +16,8 @@ const HomeBanner = () => {
             </h2>
             <div className="w-24 h-0.5 bg-primary" />
             <p className="font-medium text-lg md:text-xl text-balance text-primary-foreground">
-              Geopoint Inc. routinely provides surveying solutions for business,
-              real estate, land development and civil engineering in Boise area.
+              Geonas routinely provides surveying solutions for business, real
+              estate, land development and civil engineering in Boise area.
             </p>
           </div>
         </div>
@@ -22,9 +27,9 @@ const HomeBanner = () => {
         <div className="bg-secondary p-5 text-secondary-foreground flex gap-4">
           <MailOpenIcon size={30} className="shrink-0" />
           <div className="space-y-2">
-            <p className="text-lg font-medium">contact@geonas.com</p>
+            <p className="text-lg font-medium">{companyEmail}</p>
             <p className="text-sm">
-              Don’t hesitate and write us. This is the general email.
+              Don&apos;t hesitate and write us. This is the general email.
             </p>
           </div>
         </div>
@@ -32,7 +37,7 @@ const HomeBanner = () => {
         <div className="bg-secondary p-5 text-secondary-foreground flex gap-4">
           <PhoneCallIcon size={30} className="shrink-0" />
           <div className="space-y-2">
-            <p className="text-lg font-medium">+452.87.9875</p>
+            <p className="text-lg font-medium">{formatCompanyPhone()}</p>
             <p className="text-sm">
               We are available for questions and estimates.
             </p>
@@ -43,7 +48,7 @@ const HomeBanner = () => {
           <MapPinIcon size={30} className="shrink-0" />
           <div className="space-y-2">
             <p className="text-lg font-medium">Geonas</p>
-            <p className="text-sm">670 Garden Drive, Boise, Idaho 83702</p>
+            <p className="text-sm">{companyAddress}</p>
           </div>
         </div>
       </div>
