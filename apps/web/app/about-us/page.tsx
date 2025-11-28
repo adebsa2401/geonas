@@ -10,6 +10,13 @@ import Link from "next/link";
 import { StatsSection } from "@/components/layout/about-us/stats-section";
 import { ServicesSection } from "@/components/layout/about-us/services-section";
 import { SloganSection } from "@/components/layout/about-us/slogan-section";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us - Geonas",
+  description:
+    "Learn more about Geonas, our mission, values, and the team dedicated to providing top-notch land surveying and mapping services.",
+};
 
 export default function AboutUsPage() {
   return (

@@ -27,9 +27,9 @@ const SiteHeader = () => {
       <Accordion collapsible type="single" className="lg:hidden bg-accent">
         <AccordionItem value="header">
           <div className="p-5 flex items-center justify-between">
-            <div className="relative size-16 border">
+            <Link href="/" className="relative size-16 border">
               <Image fill src="/images/logo.png" alt="Geonas's logo" />
-            </div>
+            </Link>
 
             <AccordionTrigger asChild>
               <Button size="lg" className="group">
@@ -44,47 +44,49 @@ const SiteHeader = () => {
           </div>
 
           <AccordionContent className="px-5">
-            <nav>
-              <ul>
-                <li
-                  className={cn(
-                    "border-dashed border-t py-4 font-medium text-lg text-secondary",
-                    {
-                      "text-primary": pathname === "/",
-                    },
-                  )}
-                >
-                  <Link href="/">Home</Link>
-                </li>
-                <li
-                  className={cn(
-                    "border-dashed border-t py-4 font-medium text-lg text-secondary",
-                    {
-                      "text-primary": pathname.startsWith("/news"),
-                    },
-                  )}
-                >
-                  <Link href="/news">News</Link>
-                </li>
-                <li
-                  className={cn(
-                    "border-dashed border-t py-4 font-medium text-lg text-secondary",
-                    {
-                      "text-primary": pathname === "/about-us",
-                    },
-                  )}
-                >
-                  <Link href="/about-us">About us</Link>
-                </li>
-                <li className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all">
-                  <Link href="/contact-us" className="py-4 px-5 flex flex-col">
-                    <span className="font-medium text-lg ">Order a Survey</span>
-                    <span className="text-sm opacity-80">
-                      Let&apos;s talk about your projects.
-                    </span>
-                  </Link>
-                </li>
-              </ul>
+            <nav className="flex flex-col">
+              <Link
+                href="/"
+                className={cn(
+                  "border-dashed border-t py-4 font-medium text-lg text-secondary",
+                  {
+                    "text-primary": pathname === "/",
+                  },
+                )}
+              >
+                Home
+              </Link>
+              <Link
+                href="/news"
+                className={cn(
+                  "border-dashed border-t py-4 font-medium text-lg text-secondary",
+                  {
+                    "text-primary": pathname.startsWith("/news"),
+                  },
+                )}
+              >
+                News
+              </Link>
+              <Link
+                href="/about-us"
+                className={cn(
+                  "border-dashed border-t py-4 font-medium text-lg text-secondary",
+                  {
+                    "text-primary": pathname === "/about-us",
+                  },
+                )}
+              >
+                About us
+              </Link>
+              <Link
+                href="/contact-us"
+                className="bg-primary hover:bg-primary/80 text-primary-foreground transition-all py-4 px-5 flex flex-col"
+              >
+                <span className="font-medium text-lg ">Order a Survey</span>
+                <span className="text-sm opacity-80">
+                  Let&apos;s talk about your projects.
+                </span>
+              </Link>
             </nav>
           </AccordionContent>
         </AccordionItem>
@@ -128,9 +130,9 @@ const SiteHeader = () => {
 
         <div className="px-5">
           <div className="container mx-auto flex items-center gap-10">
-            <div className="relative size-28 border">
+            <Link href="/" className="relative size-28 border">
               <Image fill src="/images/logo.png" alt="Geonas's logo" />
-            </div>
+            </Link>
 
             <nav className="flex items-center gap-10 flex-1 py-5">
               <div className="flex-1 flex items-center gap-10">

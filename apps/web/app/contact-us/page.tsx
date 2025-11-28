@@ -9,6 +9,13 @@ import {
 import Link from "next/link";
 import { ContactsInfoSection } from "@/components/layout/contact-us/contacts-info-section";
 import { ContactUsForm } from "@/components/forms/contact-us-form";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us - Geonas",
+  description:
+    "Get in touch with Geonas for professional land surveying and mapping services. We're here to assist you with your surveying needs.",
+};
 
 export default function ContactUsPage() {
   return (
