@@ -22,7 +22,7 @@ const ServicesSection = () => {
                 />
               </div>
               <h3 className="font-bold text-secondary/80 text-lg uppercase">
-                Real Estate Property Boundaries
+                Bornage
               </h3>
               <div className="w-1/2 h-0.5 bg-primary" />
               <p className="text-secondary/80 leading-8">

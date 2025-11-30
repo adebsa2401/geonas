@@ -1,9 +1,10 @@
 import { parsePhoneNumberWithError } from "libphonenumber-js";
 
-export const companyAddress = "79 Rue de Bruxelles, Namur 5000";
+export const companyAddress = "Rue du Pairay 126/1 4100 Seraing";
 export const companyEmail = "contact@geonas.be";
 export const companyPhone = "+32499820619";
 export const companyWhatsAppPhone = "+32499820619";
+export const linkedInURL = "https://www.linkedin.com/company/geonas-s-a-/";
 
 export const formatCompanyPhone = () => {
   try {

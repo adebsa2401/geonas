@@ -23,8 +23,8 @@ const SiteSidebar = () => {
         </li>
       </ul>
 
-      <h6 className="uppercase text-secondary/80 text-xs font-medium [writing-mode:vertical-rl] rotate-180 tracking-widest">
-        Professional Land Surveying
+      <h6 className="uppercase text-primary text-sm font-medium [writing-mode:vertical-rl] rotate-180 tracking-widest">
+        Bureau de géomètres-experts et conseils
       </h6>
     </aside>
   );

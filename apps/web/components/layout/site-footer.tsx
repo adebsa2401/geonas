@@ -19,10 +19,11 @@ const SiteFooter = () => {
                 Geonas
               </h4>
               <p className="text-secondary/80">
-                Geonas routinely provides surveying solutions for business, real
-                estate, land development and civil engineering in Boise area.
-                The highest quality, most accurate & precise land surveying
-                services.
+                Geonas fournit des solutions d&apos;arpentage pour les
+                entreprises, l&apos;immobilier, l&apos;aménagement du territoire
+                et le génie civil en Wallonie. Des services d&apos;arpentage
+                foncier de la plus haute qualité, les plus précis et les plus
+                exacts.
               </p>
             </div>
 

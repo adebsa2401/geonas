@@ -10,20 +10,21 @@ const ContactsInfoSection = () => {
   return (
     <div className="py-10 space-y-8">
       <h3 className="font-bold text-primary text-lg">
-        If you have a project you would like to discuss
+        Si vous avez un projet dont vous aimeriez discuter
       </h3>
 
       <h2 className="font-bold text-3xl text-secondary">
-        We&apos;d love to hear from you
+        Nous serions ravis d&apos;en parler.
       </h2>
 
       <div className="h-0.5 w-24 bg-primary" />
 
       <p className="text-lg leading-relaxed text-secondary/80 font-medium">
-        Please feel free to contact us via phone, email, or this form! We
-        respect your privacy and will never share this information with a third
-        party. If you&apos;d like a walk-in appointment, kindly call ahead to
-        schedule. Thank you!
+        N&apos;hésitez pas à nous contacter par téléphone, par e-mail ou via ce
+        formulaire ! Nous respectons votre vie privée et ne partagerons jamais
+        ces informations avec des tiers. Si vous souhaitez vous présenter sans
+        rendez-vous, veuillez nous appeler à l&apos;avance pour prendre
+        rendez-vous. Merci !
       </p>
 
       <Separator />
@@ -41,7 +42,8 @@ const ContactsInfoSection = () => {
         <div className="space-y-2 text-secondary">
           <p className="text-lg font-medium">{companyEmail}</p>
           <p className="text-sm">
-            Don&apos;t hesitate and write us. This is the general email.
+            N&apos;hésitez pas à nous écrire. Voici l&apos;adresse e-mail
+            générale.
           </p>
         </div>
       </div>
@@ -51,7 +53,8 @@ const ContactsInfoSection = () => {
         <div className="space-y-2 text-secondary">
           <p className="text-lg font-medium">{formatCompanyPhone()}</p>
           <p className="text-sm">
-            We are available for questions and estimates.
+            Nous sommes à votre disposition pour toute question ou demande de
+            devis.
           </p>
         </div>
       </div>

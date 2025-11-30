@@ -12,12 +12,15 @@ const HomeBanner = () => {
         <div className="lg:container mx-auto">
           <div className="space-y-5 max-w-xl">
             <h2 className="text-5xl md:text-6xl font-bold text-balance text-primary-foreground">
-              Professional Land Surveying & Mapping
+              Bureau de géomètres-experts et conseils
             </h2>
             <div className="w-24 h-0.5 bg-primary" />
             <p className="font-medium text-lg md:text-xl text-balance text-primary-foreground">
-              Geonas routinely provides surveying solutions for business, real
-              estate, land development and civil engineering in Boise area.
+              Geonas fournit des solutions d&apos;arpentage pour les
+              entreprises, l&apos;immobilier, l&apos;aménagement du territoire
+              et le génie civil en Wallonie. Des services d&apos;arpentage
+              foncier de la plus haute qualité, les plus précis et les plus
+              exacts.
             </p>
           </div>
         </div>

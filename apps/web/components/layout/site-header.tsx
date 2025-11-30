@@ -54,7 +54,7 @@ const SiteHeader = () => {
                   },
                 )}
               >
-                Home
+                Accueil
               </Link>
               <Link
                 href="/news"
@@ -65,7 +65,7 @@ const SiteHeader = () => {
                   },
                 )}
               >
-                News
+                Actualités
               </Link>
               <Link
                 href="/about-us"
@@ -76,7 +76,7 @@ const SiteHeader = () => {
                   },
                 )}
               >
-                About us
+                A propos
               </Link>
               <Link
                 href="/contact-us"
@@ -142,7 +142,7 @@ const SiteHeader = () => {
                     "text-primary": pathname === "/",
                   })}
                 >
-                  Home
+                  Accueil
                 </Link>
                 <Link
                   href="/news"
@@ -150,7 +150,7 @@ const SiteHeader = () => {
                     "text-primary": pathname.startsWith("/news"),
                   })}
                 >
-                  News
+                  Actualités
                 </Link>
                 <Link
                   href="/about-us"
@@ -158,16 +158,16 @@ const SiteHeader = () => {
                     "text-primary": pathname === "/about-us",
                   })}
                 >
-                  About us
+                  A propos
                 </Link>
               </div>
               <Link
                 href="/contact-us"
                 className="py-4 px-5 flex flex-col bg-primary hover:bg-primary/80 text-primary-foreground transition-all"
               >
-                <span className="font-medium">Order a Survey</span>
+                <span className="font-medium">Contactez-nous</span>
                 <span className="text-xs opacity-80">
-                  Let&apos;s talk about your projects.
+                  Discutons de vos projets.
                 </span>
               </Link>
             </nav>

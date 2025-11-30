@@ -105,7 +105,7 @@ const ContactUsForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-secondary/80 text-base">
-                Your Name*
+                Votre Nom*
               </FormLabel>
               <FormControl>
                 <Input {...field} className="h-12 bg-background" />
@@ -121,7 +121,7 @@ const ContactUsForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-secondary/80 text-base">
-                Your Email*
+                Votre Email*
               </FormLabel>
               <FormControl>
                 <Input type="email" {...field} className="h-12 bg-background" />
@@ -137,7 +137,7 @@ const ContactUsForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-secondary/80 text-base">
-                Interested In*
+                Interessé par*
               </FormLabel>
               <FormControl>
                 <Select value={field.value} onValueChange={field.onChange}>
@@ -162,7 +162,7 @@ const ContactUsForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-secondary/80 text-base">
-                Subject*
+                Objet*
               </FormLabel>
               <FormControl>
                 <Input {...field} className="h-12 bg-background" />
@@ -178,7 +178,7 @@ const ContactUsForm = () => {
           render={({ field }) => (
             <FormItem>
               <FormLabel className="text-secondary/80 text-base">
-                Your Message*
+                Votre Message*
               </FormLabel>
               <FormControl>
                 <Textarea
@@ -197,7 +197,9 @@ const ContactUsForm = () => {
           size="lg"
           className="w-full"
         >
-          {form.formState.isSubmitting ? "Sending..." : "Send Message"}
+          {form.formState.isSubmitting
+            ? "Envoi en cours..."
+            : "Envoyer Message"}
         </Button>
       </form>
     </Form>
