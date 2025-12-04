@@ -17,6 +17,7 @@ import tailwindConfig from "@workspace/resend/tailwind.config";
 type NewMessageNotificationEmailProps = {
   senderName: string;
   senderEmail: string;
+  senderPhoneNumber?: string;
   interestedIn: string;
   message: string;
 };
@@ -24,6 +25,7 @@ type NewMessageNotificationEmailProps = {
 const NewMessageNotificationEmail = ({
   senderName,
   senderEmail,
+  senderPhoneNumber,
   interestedIn,
   message,
 }: NewMessageNotificationEmailProps) => {
@@ -33,7 +35,7 @@ const NewMessageNotificationEmail = ({
       <Tailwind config={tailwindConfig}>
         <Body className="bg-white font-airbnb">
           <Preview>
-            New message from {senderName} regarding {interestedIn}
+            Nouveau message reçu de {senderName} à propos de {interestedIn}
           </Preview>
           <Container className="mx-auto py-5 pb-12 w-[580px] max-w-full">
             <Section>
@@ -48,11 +50,21 @@ const NewMessageNotificationEmail = ({
             <Section className="pb-5">
               <Row>
                 <Text className="text-[32px] leading-[1.3] font-bold text-[#484848]">
-                  You&apos;ve got a new message from {senderName}
+                  Vous avez reçu un nouveau message de {senderName}
                 </Text>
 
+                {senderPhoneNumber && (
+                  <Text className="text-lg leading-[1.4] text-[#484848]">
+                    Numéro de téléphone de {senderName}:{" "}
+                    <strong className="font-semibold">
+                      {senderPhoneNumber}
+                    </strong>
+                    .
+                  </Text>
+                )}
+
                 <Text className="text-lg leading-[1.4] text-[#484848]">
-                  {senderName} is interested in{" "}
+                  {senderName} est interessé par{" "}
                   <strong className="font-semibold">{interestedIn}</strong>.
                 </Text>
 
@@ -64,7 +76,7 @@ const NewMessageNotificationEmail = ({
                   className="bg-[#F4540FFF] rounded-sm text-white text-[18px] py-[19px] px-[30px] no-underline text-center block"
                   href={`mailto:${senderEmail}`}
                 >
-                  Reply to {senderName}
+                  Répondre à {senderName}
                 </Button>
               </Row>
             </Section>
@@ -74,7 +86,7 @@ const NewMessageNotificationEmail = ({
             <Section>
               <Row>
                 <Text className="text-[#9ca299] text-[14px] leading-[24px] mb-2.5">
-                  Geonas, Rue de Bruxelles 79, 5000 Namur, Belgium
+                  Rue du Pairay 126/1 4100 Seraing
                 </Text>
               </Row>
             </Section>

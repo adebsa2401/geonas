@@ -18,6 +18,7 @@ export const contactRouter = createTRPCRouter({
             required_error: "Email is required",
           })
           .email("Invalid email address"),
+        phoneNumber: z.string().optional(),
         interestedIn: z.enum(["surveying", "consultation", "other"], {
           required_error: "Please select an option",
         }),
@@ -41,6 +42,7 @@ export const contactRouter = createTRPCRouter({
         react: NewMessageNotificationEmail({
           senderName: input.name,
           senderEmail: input.email,
+          senderPhoneNumber: input.phoneNumber,
           interestedIn: input.interestedIn,
           message: input.message,
         }),

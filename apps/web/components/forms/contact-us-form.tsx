@@ -25,6 +25,7 @@ import { Button } from "@workspace/ui/components/button";
 import { useTRPC } from "@workspace/trpc/client";
 import { useMutation } from "@tanstack/react-query";
 import { toast } from "@workspace/ui/components/sonner";
+import { PhoneInput } from "@workspace/ui/components/phone-input";
 
 const validationSchema = z.object({
   name: z
@@ -37,6 +38,7 @@ const validationSchema = z.object({
       required_error: "Email is required",
     })
     .email("Invalid email address"),
+  phoneNumber: z.string().optional(),
   interestedIn: z.enum(["surveying", "consultation", "other"], {
     required_error: "Please select an option",
   }),
@@ -85,6 +87,7 @@ const ContactUsForm = () => {
       await mutateAsync({
         name: values.name,
         email: values.email,
+        phoneNumber: values.phoneNumber,
         interestedIn: values.interestedIn,
         subject: values.subject,
         message: values.message,
@@ -125,6 +128,26 @@ const ContactUsForm = () => {
               </FormLabel>
               <FormControl>
                 <Input type="email" {...field} className="h-12 bg-background" />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        <FormField
+          control={form.control}
+          name="phoneNumber"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel className="text-secondary/80 text-base">
+                Votre Numéro de Téléphone
+              </FormLabel>
+              <FormControl>
+                <PhoneInput
+                  defaultCountry="BE"
+                  {...field}
+                  className="h-12 bg-background"
+                />
               </FormControl>
               <FormMessage />
             </FormItem>
