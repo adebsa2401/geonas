@@ -19,30 +19,6 @@ const StatsSection = () => {
         </div>
 
         <div className="bg-[url(/images/bg-stats.png)] bg-no-repeat bg-cover size-full max-md:h-96 max-md:mx-auto max-md:w-[calc(100%-2.5rem)] bg-right" />
-
-        <div className="grid grid-cols-2 md:grid-cols-4 md:col-span-2 max-w-5xl lg:absolute lg:left-0 lg:bottom-20">
-          <div className="flex flex-col items-center justify-center gap-1 px-8 py-12 bg-secondary text-secondary-foreground">
-            <span className="font-bold text-4xl text-center">2.400+</span>
-            <span className="font-medium text-center">Projects</span>
-          </div>
-
-          <div className="flex flex-col items-center justify-center gap-1 px-8 py-12 bg-secondary text-secondary-foreground">
-            <span className="font-bold text-4xl text-center">28</span>
-            <span className="font-medium text-center">Years of Experience</span>
-          </div>
-
-          <div className="flex flex-col items-center justify-center gap-1 px-8 py-12 bg-secondary text-secondary-foreground">
-            <span className="font-bold text-4xl text-center">854</span>
-            <span className="font-medium text-center">Happy Clients</span>
-          </div>
-
-          <div className="flex flex-col items-center justify-center gap-1 px-8 py-12 bg-secondary text-secondary-foreground">
-            <span className="font-bold text-4xl text-center">14</span>
-            <span className="font-medium text-center">
-              Quality Certificates
-            </span>
-          </div>
-        </div>
       </div>
     </section>
   );
